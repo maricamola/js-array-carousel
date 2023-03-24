@@ -19,4 +19,4 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
  
 ## Steps JS
 
-- Creare ciclo con immagini
+- Creare ciclo per stampare le img nella sections;
