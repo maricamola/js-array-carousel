@@ -46,6 +46,28 @@ h1{
   width: 60%;
   height: 80%;
   background-color: #2A7A96;
+  position: relative;
 }
+
+.btn{
+  background-color: rgba(0, 0, 0, 0.266);
+  font-size: 15px;
+  border-radius: 50px ;
+  padding: 8px;
+  margin: 20px;
+}
+
+.btn-up{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-down{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
 
 
