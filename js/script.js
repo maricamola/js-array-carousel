@@ -1,3 +1,4 @@
+//immagini
 const images = [
   'img/foto1.jpg',
   'img/foto2.jpg',
@@ -6,12 +7,13 @@ const images = [
   'img/foto5.jpg',
 ] 
 
+let counterImage = 0
 const sectionsWrapper = document.querySelector('.sections-wrapper');
 
 const btnDown = document.querySelector('.btn-up')
 const btnUp = document.querySelector('.btn-down');
 
-let counterImage = 0
+
 
 for(let i = 0; i < images.length; i++){
   const image = images[1];
@@ -19,7 +21,6 @@ for(let i = 0; i < images.length; i++){
   sectionsWrapper.innerHTML += `
   <img class="section hide" src="${image}">
   `
-  console.log(i)
 }
 
 const sectionsGroup = document.getElementsByClassName('section');
@@ -30,11 +31,20 @@ btnUp.addEventListener('click' , function(){
   sectionsGroup[counterImage].classList.add('hide');
 
   counterImage++;
-  sections[counterImage].classList.remove('hide');
+  sectionsGroup[counterImage].classList.remove('hide');
+
+  if(counterImage === images.length -1){
+  btnUp.classList.add('hide');
+}
 })
 
 btnDown.addEventListener('click' , function(){
+  sectionsGroup[counterImage].classList.add('hide');
   
+  counterImage--;
+  sectionsGroup[counterImage].classList.remove('hide');
 })
+
+
 
 
